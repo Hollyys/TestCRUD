@@ -9,7 +9,7 @@ public class Article {
     private Long id;
     private String title;
     private String content;
-    @Column(writer = "username")
+    //@Column(writer = "username")
     private String writer;
 
     public Article() { }

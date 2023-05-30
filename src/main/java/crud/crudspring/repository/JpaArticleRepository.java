@@ -1,12 +1,14 @@
 package crud.crudspring.repository;
 
 import crud.crudspring.domain.Article;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
-@repository
+
+@Repository
 public class JpaArticleRepository implements ArticleRepository{
     private final EntityManager em;
 
@@ -14,6 +16,7 @@ public class JpaArticleRepository implements ArticleRepository{
         this.em = em;
     }
 
+    @Override
     public Article save(Article article) {
         em.persist(article);
         return article;
