@@ -7,10 +7,11 @@ import crud.crudspring.repository.JpaArticleRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
-//@Transactional
+@Transactional
 @Service
 public class ArticleService {
     private final ArticleRepository articleRepository;

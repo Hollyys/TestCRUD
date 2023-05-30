@@ -1,7 +1,8 @@
 package crud.crudspring.domain;
 
 import javax.persistence.*;
-
+@Entity
+@Table (name = "Article")
 public class Article {
 
     @Id
